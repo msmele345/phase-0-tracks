@@ -2,6 +2,8 @@
 
 **Instructions: ** Define each of the following Git concepts.
 
+**Adding teacher name, Tyler and submitting PR**
+
 * What is version control?  Why is it useful?
 
 -Version control systems are a category of sofware tools thatr help manage changes to the source code over time.

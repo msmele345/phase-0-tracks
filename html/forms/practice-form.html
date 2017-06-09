@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coffee Order</title>
+</head>
+<body>
+  <form action="Success.html" method="post">
+    <div>
+      <label>Name:</label>
+      <input type="text" name="customer name">
+    </div>
+    <div>
+      <label>Phone Number:</label>
+      <input type="TEL" name="customer phone number">
+    </div>
+    <div>
+      <label>
+      Preferred pickup time
+      <input type="time" min = "08:00" max = "20:00" name="pickup">
+      </label>
+    </div>
+      <p> Select your coffee size </p>
+    <select name="select">
+        <option value="value1">Tall</option>
+        <option value="value2" selected>Grande</option>
+        <option value="value3">Venti</option>
+    </select>
+    <div>
+      <textarea name="textarea"
+
+      rows="10" cols="50">Special Instructions</textarea>
+    </div>
+    <div>
+      <button type="submit">Place Order</button>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+#body{
+    position: relative;
+    top: 8cm;
+    width: 400px;
+    height: 200px;
+    left: 15cm;
+    z-index: 1;
+}
+
+#hat{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    z-index: 2;
+    top: 6cm;
+    left: 15cm;
+}
+
+#glasses{
+    position: relative;
+    top:5.5cm;
+    width: 400px;
+    height: 200px;
+    left:16cm;
+    z-index: 3;
+}

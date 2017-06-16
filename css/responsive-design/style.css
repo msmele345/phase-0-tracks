@@ -10,23 +10,23 @@ cite {
 }
 
 #external-links ul {
-  position: relative;
-  width: 200px;
+  position: absolute;
+  width: 15%;
   list-style-type: none;
   padding-left: 0px;
   left:21.5cm;
-  top:4cm;
+  top:5cm;
 }
 
 #link-header{
-  margin-top:3cm;
+  margin-top:4cm;
   float: right
 }
 
 .main-section{
-  width: 756px;
-  height:50px;
-  display: inline-block;
+  width: 80%;
+  min-width: 20%;
+  display: inherit;
 }
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like,

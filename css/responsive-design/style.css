@@ -10,12 +10,26 @@ cite {
 }
 
 #external-links ul {
+  position: relative;
+  width: 200px;
   list-style-type: none;
   padding-left: 0px;
+  left:21.5cm;
+  top:4cm;
 }
 
+#link-header{
+  margin-top:3cm;
+  float: right
+}
+
+.main-section{
+  width: 756px;
+  height:50px;
+  display: inline-block;
+}
 /* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
+image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 img {
   width: 100%;
@@ -29,4 +43,20 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+body {
+  max-width: 960px;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-weight: bold;
+  }
 }

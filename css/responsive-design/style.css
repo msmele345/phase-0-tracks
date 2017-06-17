@@ -3,30 +3,28 @@ blockquote {
   padding: 15px;
   margin-left: 0px;
 }
-
 cite {
   display: block;
   margin-top: 10px;
 }
 
+#external-links {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+}
 #external-links ul {
-  position: absolute;
-  width: 15%;
   list-style-type: none;
   padding-left: 0px;
-  left:21.5cm;
-  top:5cm;
 }
-
 #link-header{
-  margin-top:4cm;
-  float: right
+  margin-top:3cm;
 }
-
 .main-section{
-  width: 80%;
-  min-width: 20%;
-  display: inherit;
+  width: 756px;
+  height:50px;
+  display: inline-block;
+  position: absolute;
 }
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like,
@@ -34,27 +32,23 @@ but it's optional! */
 img {
   width: 100%;
 }
-
 figure {
   margin-left: 0px;
   margin-right: 0px;
 }
-
 figcaption {
   font-style: italic;
   text-align: right;
 }
-
 body {
   max-width: 960px;
+  margin: 0 auto;
 }
-
 @media screen and (max-width: 500px) {
   body {
     font-size: 25px;
   }
 }
-
 @media screen and (max-width: 500px) {
   body {
     font-weight: bold;

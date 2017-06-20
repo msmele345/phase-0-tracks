@@ -1,0 +1,38 @@
+Robots Algorithm
+
+
+-Wait for elevator door to close
+-Look on elevator panel and determine current floor\
+-Generate a random number (rand(total_floors))
+-Examine every elevator button one at a time on the panel
+	-if the current reviewed button number equals the random number generated:
+		-Press elevator button
+		-Wait for elevator door to open
+		-Walk out of elevator 
+	-Otherwise:
+		-Continue to examine the next button
+
+	
+
+Release 1 - Walking the Dog
+
+
+-Arrive home from studying every night 11:00 pm
+-check to see if dog is awake
+	-If dog is awake:	
+		-pet dog
+		-check dog bowl to see if there is food in it
+			-if food is in the dog bowl:
+				-walk dog
+				-go to sleep
+			-otherwise:
+				-Feed dog
+				-walk the dog
+				-got to sleep
+	 
+	-otherwise:
+		-Go to sleep!
+
+
+
+

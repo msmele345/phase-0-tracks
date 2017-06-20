@@ -1,3 +1,59 @@
 *{
-  background-color: blue;
+  background-color: #74AFAD;
 }
+
+header{
+  text-align: center;
+}
+header p{
+  font-weight: bold;
+}
+
+body{
+ margin: 0;
+}
+
+.column-1{
+  display: inline-block;
+  margin-right:30px;
+  width: 40%;
+  height: 100%;
+  margin-left: 2cm;
+}
+
+.column-2{
+  display: inline-block;
+  width: 40%;
+  height: 1111px;
+/*  Found this out making adjustments in the chrome developer tool! Great tip from the gps guide*/
+  vertical-align: top;
+}
+
+footer{
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+ul{
+  list-style-type: none;
+  font-size: 18px;
+}
+
+p{
+  font-size: 20px;
+  font-style: italic;
+}
+
+details{
+  font-size: 16px;
+  margin: 2px;
+  padding:3px;
+
+}
+
+article h2{
+ color:blue;
+ text-decoration: underline;
+}
+

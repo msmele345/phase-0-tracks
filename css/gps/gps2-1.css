@@ -1,3 +1,55 @@
 *{
-  background-color: blue;
+  /*background-color: blue;*/
 }
+
+
+
+header{
+  background-color: beige;
+  /*margin-left: 5%;*/
+  text-align: center;
+}
+
+body{
+margin: 0;
+}
+
+.column-1{
+  display: inline-block;
+  width: 40%;
+  background-color: orange;
+  margin-left: 2cm;
+
+}
+
+.column-2{
+  display: inline-block;
+  width: 40%;
+  background-color: teal;
+  vertical-align: top;
+
+}
+
+footer{
+  text-align: center;
+  /*margin-top: 25px;*/
+}
+
+ul{
+  list-style-type: none;
+  font-size: 18px;
+}
+
+details{
+  font-size: 16px;
+  margin: 2px;
+  padding:3px;
+
+
+}
+
+article h2{
+ color:red;
+
+}
+

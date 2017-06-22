@@ -7,7 +7,6 @@
 #return empty string variable
 
 
-
 def encrypt(string)
  new_string = ""
  i = 0

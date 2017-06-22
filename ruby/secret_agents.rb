@@ -6,6 +6,8 @@
   #Apply .next method on each character and adding that to empty string variable
 #return empty string variable
 
+
+
 def encrypt(string)
  new_string = ""
  i = 0
@@ -20,10 +22,8 @@ def encrypt(string)
   end
   i+=1
  end
- puts new_string
+ new_string
 end
-
-encrypt("zed")
 
 
 def backwards(letter)
@@ -44,9 +44,33 @@ def decrypt (string)
    end
    j+=1
  end
- puts backward_string
+   backward_string
 end
 
-decrypt("bcd")
-decrypt("afe")
+#DRIVE CODE
 
+# Get user input for decrypt and encrypt
+# Get user input for password
+# call the correct method based of the response.
+
+
+puts "Would you like to encrypt or decrypt your password?"
+answer = gets.chomp
+  if answer == "encrypt"
+    puts "Enter Password"
+    password = gets.chomp
+    puts encrypt(password)
+  elsif answer == "decrypt"
+    puts "Enter Password"
+    password = gets.chomp
+    puts decrypt(password)
+  else
+    puts "Error, invaid entry"
+end
+
+# puts encrypt("zed")
+# puts encrypt ("abc")
+# puts decrypt("bcd")
+# puts decrypt("afe")
+#Its calling both methods. Encrypt first and then the second method is called to reverse it.
+# puts decrypt(encrypt("swordfish"))

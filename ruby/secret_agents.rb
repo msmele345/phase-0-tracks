@@ -6,7 +6,7 @@
   #Apply .next method on each character and adding that to empty string variable
 #return empty string variable
 
-def encrypt (string)
+def encrypt(string)
  new_string = ""
  i = 0
 
@@ -18,7 +18,35 @@ def encrypt (string)
   else
     new_string += string[i].next
   end
-  return new_string
+  i+=1
+ end
+ puts new_string
 end
 
-encrypt ("abc")
+encrypt("zed")
+
+
+def backwards(letter)
+  alpha = "abcdefghijklmnopqrstuvwxyz"
+  previous_index = alpha.index(letter) -1
+  prevous_letter = alpha[previous_index]
+end
+
+
+def decrypt (string)
+  backward_string = ""
+  j = 0
+  while j < string.length
+    if string[j] == " "
+      backward_string += " "
+    else
+      backward_string += backwards(string[j])
+   end
+   j+=1
+ end
+ puts backward_string
+end
+
+decrypt("bcd")
+decrypt("afe")
+

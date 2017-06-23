@@ -19,7 +19,8 @@ def vamp_finder
     puts "Thank you"
   elsif answer == "sunshine"
     allergies = false
-    puts "Probably a vampire."
+    abort ("Probably a vampire.")
+
  end
 end
 

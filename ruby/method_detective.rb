@@ -28,7 +28,7 @@ p "The case of the disappearing last letter".chop # OR string.slice(-1)
 p "The mystery of the missing first letter"[1..-1] # string.slice(0)
 # => "he mystery of the missing first letter"
 
-p "Elementary,    my   dear        Watson!".strip
+p "Elementary,    my   dear        Watson!".squueze(" ")
 # => "Elementary, my dear Watson!"
 
 p "z".ord    #Returns integer ordinal of the string. Z is at the 122 position in the UTF-8 codepoint

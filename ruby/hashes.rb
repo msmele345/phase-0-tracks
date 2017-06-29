@@ -4,19 +4,12 @@
 #Create driver code below to ask the designer questions
 #
 
-# app = {
-#   :client_name => name,
-#   :client_age => age,
-#   :number_of_children => kids,
-#   :decor_theme=> theme,
-#   :previous_design => past
-# }
-
-
-# puts app[:name]
-
 
 #DRIVER CODE
+
+
+puts "Welcome to Bucktown Designs! We are excited that you choose us to help you incorporate some style into your life! Please fill out the below form to help us better understand what your looking for."
+
 puts "What is your name?"
 name = gets.chomp
 
@@ -26,45 +19,43 @@ age = gets.chomp.to_i
 puts "How many children do you have?"
 kids = gets.chomp.to_i
 
+puts "How many square feet is your house?"
+size = gets.chomp.to_i
+
 puts "What is your preferred theme?"
 theme = gets.chomp
 
-puts "A designer has been hired in the past (True/False)"
-past = gets.chomp
+puts "Are there any particular hobbies or interests that you want incorporated into the design?"
+interests = gets.chomp
 
-puts "Do you need to change any information on the form? If not, please enter None"
+puts "Do you need to go back and change any information on the form? If not, please enter No."
 changes = gets.chomp
 
 
 app = {
-  :client_name => name,
-  :client_age => age,
-  :number_of_children => kids,
+  :name => name,
+  :age => age,
+  :number_of_kids => kids,
+  :home_size => size,
   :decor_theme=> theme,
-  :previous_design => past
+  :hobbies => interests
 }
 
-#Check to see if user wants to change any information before submitting. If the answer is not NONE, then find a way to take the user input and modify the hash.
-#User conditional logic to do this below
-#How can I take user input on modified answer and replace existing hash rather than add a new key value pair?
+#Check to see if user wants to change any information before submitting. If the answer is anything but No, then find a way to take the user input and modify the hash.
+#Create condition logic that will ask for the section to change, then ask then ask for what the correct information should be
+#Modify the exiting key/value pair by using interpolation and setting it to the correct answer variable
 
-if changes != "None"
-  puts "Which section would you like to change?"
+if changes != "No"
+  puts "Which section would you like to change? (Please indicate the exact field title that needs to be changed)"
     modification = gets.chomp.to_sym
   puts "What is the correct information?"
     changed_answer = gets.chomp
-    # app[:modification] = changed_answer
     app[:"#{modification}"] = changed_answer
-    p app
+    puts "Thank you, your form has been updated! We will be contacting you shortly to setup a house visit!"
+    puts app
  else
-  p app
+   puts "All set, we will be contacting you shortly to setup a house visit"
+   puts app
 end
 
-
-
-
-# puts "Name test"
-
-# if :hired == true
-#  app[:success] ="yes"
-# end
+#Print final hash with a goodbye message

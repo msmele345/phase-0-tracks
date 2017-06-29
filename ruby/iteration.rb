@@ -1,13 +1,13 @@
-# def status_message
-#   puts "Welcome to the zoo!"
-#   animal1 = "Lion"
-#   animal2 = "Tiger"
-#   yield(animal1, animal2)
-#   puts "Thank you for visiting the zoo!"
+def status_message
+  puts "Welcome to the zoo!"
+  animal1 = "Lion"
+  animal2 = "Tiger"
+  yield(animal1, animal2)
+  puts "Thank you for visiting the zoo!"
 
-# end
+end
 
-#   status_message { |animal1, animal2| puts "The #{animal1} is asleep for the night, but you can still see #{animal2} in the park."}
+  status_message { |animal1, animal2| puts "The #{animal1} is asleep for the night, but you can still see #{animal2} in the park."}
 
 
 zoo_animals = ["monkey", "bird", "lion", "tiger", "unicorn"]

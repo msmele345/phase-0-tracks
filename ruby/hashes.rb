@@ -1,8 +1,17 @@
+#Explore the thing - Array practice from earlier in the challenge:
+#Array = [12,2,2,3,6,10]
+#Array[2] => 3
+#Array.slice[-1] => 10
+#Array.uniq! =>[12,2,3,6,10]
+#Array
+
+#Release 2
+
 #Create hash for application questions
 #Have each question be a key, each answer be the value
 #print hash at the end of the program to show results
 #Create driver code below to ask the designer questions
-#
+
 
 
 #DRIVER CODE
@@ -22,7 +31,7 @@ kids = gets.chomp.to_i
 puts "How many square feet is your house?"
 size = gets.chomp.to_i
 
-puts "What is your preferred theme?"
+puts "What is your preferred theme? (Examples of themes might be Vintage, Full of charm, or Modern)"
 theme = gets.chomp
 
 puts "Are there any particular hobbies or interests that you want incorporated into the design?"
@@ -54,7 +63,7 @@ if changes != "No"
     puts "Thank you, your form has been updated! We will be contacting you shortly to setup a house visit!"
     puts app
  else
-   puts "All set, we will be contacting you shortly to setup a house visit"
+   puts "All set, we will be contacting you shortly to setup a house visit!"
    puts app
 end
 

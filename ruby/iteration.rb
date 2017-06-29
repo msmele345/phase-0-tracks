@@ -44,3 +44,48 @@ animal_features.each do |animal, feature|
 end
 
 p animal_features
+
+
+# Create an array of integers
+# Create empty array to assign new numbers above 5
+
+# Number 1
+
+numbers = [1,2,3,5,7,9,12]
+numbers.keep_if {|num| num <= 5}
+
+
+# Number 3
+new_numbers = numbers.select {|num| num.odd? }
+
+puts new_numbers
+
+puts numbers
+
+# a.keep_if { |v| v =~ /[aeiou]/ }  #=> ["a", "e"]
+
+#Number 2
+
+number_of_clothes = {
+  hats: 3,
+  shirts: 5,
+  pants: 16,
+  shoes: 7
+}
+
+
+number_of_clothes.delete_if {|clothes, count| count > 10}
+
+
+puts number_of_clothes
+
+
+# Number 4
+
+question_four = [2,4,6,7,8,9,10,11,3,1]
+
+new_question_four = question_four.drop_while {|num| num < 6}
+
+p new_question_four
+
+# h.delete_if {|key, value| key >= "b" }   #=> {"a"=>100}

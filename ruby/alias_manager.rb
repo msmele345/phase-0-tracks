@@ -1,4 +1,4 @@
-#TRICKY ALGO FIRST ATTEMPT
+#TRICKY ALGO 5.5
 
 #Split string into an array
 #Reverse the two words using .reverse and join them back together.
@@ -17,7 +17,7 @@ def vowel(letter)
 end
 
 def non_vowel(letter)
-non_vowels = "bcdfghjklmnpqrstuvwxyz"
+non_vowels = "bcdfghjklmnpqrstvwxyz"
 non_vowel_index = non_vowels.index(letter) + 1
 next_letter = non_vowels[non_vowel_index]
 end
@@ -25,7 +25,7 @@ end
 
 def letter_changer(string)
 vowels = "aeiou"
-non_vowels = "bcdfghjklmnpqrstuvwxyz"
+non_vowels = "bcdfghjklmnpqrstvwxyz"
 string = string.split.reverse.join(' ').downcase
 final_string = ''
 letter = 0
@@ -44,4 +44,7 @@ end
 p final_string.split.map(&:capitalize).join(' ')
 end
 
+#Driver Code
+
+letter_changer("Felicia Torres")
 letter_changer("Mitch Mele")

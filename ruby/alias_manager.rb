@@ -17,27 +17,27 @@ def vowel(letter)
 end
 
 def non_vowel(letter)
-non_vowels = "bcdfghjklmnpqrstvwxyz"
-non_vowel_index = non_vowels.index(letter) + 1
-next_letter = non_vowels[non_vowel_index]
+  non_vowels = "bcdfghjklmnpqrstvwxyz"
+  non_vowel_index = non_vowels.index(letter) + 1
+  next_letter = non_vowels[non_vowel_index]
 end
 
 
 def letter_changer(string)
-vowels = "aeiou"
-non_vowels = "bcdfghjklmnpqrstvwxyz"
-string = string.split.reverse.join(' ').downcase
-final_string = ''
-letter = 0
-while letter < string.length
-  if vowels.include?(string[letter])
-    final_string += vowel(string[letter])
-  elsif non_vowels.include?(string[letter])
-    final_string += non_vowel(string[letter])
-  elsif string[letter] == " "
-    final_string += " "
-  end
-  letter+=1
+  vowels = "aeiou"
+  non_vowels = "bcdfghjklmnpqrstvwxyz"
+  string = string.split.reverse.join(' ').downcase
+  final_string = ''
+  letter = 0
+    while letter < string.length
+      if vowels.include?(string[letter])
+        final_string += vowel(string[letter])
+      elsif non_vowels.include?(string[letter])
+        final_string += non_vowel(string[letter])
+      elsif string[letter] == " "
+        final_string += " "
+      end
+      letter+=1
 
 end
 #capitalize each first letter in the string using map

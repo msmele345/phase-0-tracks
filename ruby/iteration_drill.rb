@@ -11,7 +11,17 @@ zombie_apocalypse_supplies.each {|x| print x, "*"}
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
 # ----
-zombie_apocalypse_supplies.sort!
+
+#Reverse sort, then forward sort using two iterations
+zombie_apocalypse_supplies.each_index do |first|
+  (first + 1...zombie_apocalypse_supplies.length).each do |second|
+    if zombie_apocalypse_supplies[first] > zombie_apocalypse_supplies[second]
+      zombie_apocalypse_supplies[first], zombie_apocalypse_supplies[second] = zombie_apocalypse_supplies[second], zombie_apocalypse_supplies[first]
+    end
+  end
+end
+
+puts [zombie_apocalypse_supplies]
 
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
@@ -118,8 +128,28 @@ puts extinct_animals
 # Do not use any special built-in methods.
 # ----
 
+extinct_animals.each do |animal, extinct_date|
+  if animal == "Dodo"
+    puts "The Dodo is extinct"
+  elsif animal == "Andean Cat"
+    puts "The Andean Cat is extinct"
+  elsif animal == "Saiga Antelope"
+    puts "The Saiga Antelope is extinct"
+  end
+end
+
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
 # Find the built-in method that helps you accomplish this in the Ruby documentation
 # for Hashes.
 # ----
+
+#Custom Shift Method for Hashes
+#Delete returns the value of that key (animal) and deletes it from the hash
+
+def update_list(extinct_hash, animal)
+  [animal, extinct_hash.delete(animal)]
+end
+
+update_list(extinct_animals,"Passenger Pigeon")
+

@@ -68,8 +68,9 @@
 class Cars
 
   def initialize
-    # @name = name
-    puts "Here is the car name"
+    car_types = ["truck", "sedan", "convertabile", "SUV"]
+    @name = car_types[rand(0..3)]
+    puts "Here is the #{@name}"
   end
 
   def honk(number)
@@ -77,7 +78,7 @@ class Cars
   end
 
   def capacity(passengers)
-     "This car fits #{passengers}"
+     "This #{@name} fits #{passengers}"
   end
 
 end
@@ -89,7 +90,6 @@ end
 
 
 #Driver Code
-
 
 
 car_array = []

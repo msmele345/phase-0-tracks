@@ -74,7 +74,10 @@ class Cars
   end
 
   def honk(number)
-    number.times { puts "Honk"}
+    number.times do
+      puts "HONK"
+    end
+    puts()
   end
 
   def capacity(passengers)

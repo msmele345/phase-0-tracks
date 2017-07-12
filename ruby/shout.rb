@@ -15,7 +15,5 @@ end
 #DRIVER CODE
 
 
-Shout.singleton_methods
-Shout.class
-Shout.yell_angrily("This is tough")
-Shout.yell_happily("Ahh yea, I got it")
+p Shout.yell_angrily("This is tough")
+p Shout.yell_happily("Ahh yea, I got it")

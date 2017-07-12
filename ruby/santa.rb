@@ -32,7 +32,6 @@ class Santa
     @ethnicity
   end
 
-
   #setter methods (Attribute changing)
 
   def celebrate_birthday
@@ -48,11 +47,19 @@ class Santa
     @gender = new_gender
   end
 
+  #Print Method to check attributes at any time:
+  def about
+    puts "Gender: #{@gender}"
+    puts "Ethnicity: #{@ethnicity}"
+    puts "Current Age: #{@age}"
+    puts "Current Rankings: #{@reindeer_ranking}"
+    puts()
+  end
+
 end
 
+
 # DRIVER CODE
-
-
 
 fake_santa = Santa.new("female", "white")
 puts "This santa is #{fake_santa.age} years old"
@@ -60,6 +67,7 @@ fake_santa.speak
 fake_santa.get_mad_at("Vixen")
 puts "This santa is now #{fake_santa.celebrate_birthday} years old after celebrating his birthday."
 fake_santa.eat_milk_and_cookies("Chocolate Chip")
+fake_santa.about
 
 
 

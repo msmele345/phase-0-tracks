@@ -42,17 +42,6 @@ class GuessGame
     @guess_count
  end
 
-  # def check
-  #   if @guess_log.length == 3
-  #     @guess_log.each do |x|
-  #       if x == "#{@secret_word}"
-  #         return "VICTORY"
-  #       else return "We are done"
-  #     end
-  #   end
-  # end
-  # end
-
   def word_display
     # @current_status = loop through secret word, if letter[i] is in secret word, print letter of i. If not, print "-" !!!!! STOPPING POINT
 
@@ -88,9 +77,11 @@ end
 
 #TEST CODE
 
-
 # test_game = GuessGame.new  ##This will later be player 1 input?
 # test_game.guess_check("phone")
+# test_game.secret_word("Apple")
+# test_game.guesses
+# test_game.word_display
 
 
 #DRIVER CODE
@@ -106,7 +97,8 @@ puts()
 
 puts "Player B, please pick a secret word so we can get started. Write it down on a piece of paper and give it to me when done."
 
-game.secret_word = gets.chomp
+player2_word = gets.chomp
+game.secret_word(player2_word)
 puts()
 
 puts "....The host turns his back to Player A, and shows the audience that the secret word is ........"

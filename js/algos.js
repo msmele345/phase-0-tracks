@@ -20,6 +20,13 @@ function longest_String(string_Array) {
   return longest;
 }
 
+//Relase 2 Psuedo Code:
+// Create countdown while loop that takes a user number
+//create empty array to pass in randomly generated string as they are created
+//countdown from number with while loop
+  //On each iteration, generate a random number between 1-10
+  //After number is generated, call the createString function and pass in the random number to dictate how long each string is. Push the return value of the createString function into the empty buildArray
+// When countown iteration is complete (finalArray function), pass the buildArray full of randomly created strings into the longest_String function from release 0 above. Print the results which should be the longest string out of all the randomly generated strings from the buildArray.
 
 function finalArray (number) {
   var buildArray = []
@@ -32,6 +39,8 @@ function finalArray (number) {
   console.log("This is the longest word out of all of the randomly generated words in the array that were created from the other functions: ")
   console.log(longest_String(buildArray))
 }
+
+//Final Array function call is at the bottom in the driver code.
 
 function createString (length) {
     var string = "";

@@ -66,3 +66,22 @@ sqlite> SELECT * FROM advisors;
 3|Franklin Templeton|2
 sqlite> 
 
+## Release 3 - Research OUTER and INNER JOINS 
+
+sqlite> SELECT clients.name, clients.outside_assets FROM clients INNER JOIN advisors ON clients.advisor_id = advisors.id;
+Joe Smith|true
+Bob Adams|false
+John Walstreet|true
+Chris Moneybags|true
+Tim Doe|false
+Sara Jones|true
+sqlite> 
+
+sqlite> SELECT clients.age, clients.outside_assets FROM clients LEFT OUTER JOIN advisors ON clients.advisor_id = advisors.id;
+42|true
+36|false
+50|true
+24|true
+48|false
+32|true
+sqlite> 

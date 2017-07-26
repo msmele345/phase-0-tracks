@@ -1,0 +1,68 @@
+1. sqlite> SELECT * FROM clients
+   ...> ;
+1|Joe Smith|42|true|1
+2|Bob Adams|36|false|2
+3|John Walstreet|50|true|3
+4|Chris Moneybags|24|true|1
+5|Bob AdamTim Doe|48|false|2
+6|Sara Jones|32|true|3
+7|Ryan Youngun|22|false|3
+sqlite> SELECT * FROM advisors;
+1|Charles Schwab|2
+2|Edward Jones|2
+3|Franklin Templeton|3
+
+## Tim Doe realized he entered his name wrong when filling out his new account application at the firm. An update was made below to correct the table data. 
+
+2. sqlite> UPDATE clients SET name="Tim Doe" WHERE name="Bob AdamTim Doe";
+sqlite> SELECT * FROM clients;
+1|Joe Smith|42|true|1
+2|Bob Adams|36|false|2
+3|John Walstreet|50|true|3
+4|Chris Moneybags|24|true|1
+5|Tim Doe|48|false|2
+6|Sara Jones|32|true|3
+7|Ryan Youngun|22|false|3
+sqlite> 
+
+3. sqlite> SELECT * FROM clients, advisors WHERE clients.advisor_id = advisors.id;
+1|Joe Smith|42|true|1|1|Charles Schwab|2
+2|Bob Adams|36|false|2|2|Edward Jones|2
+3|John Walstreet|50|true|3|3|Franklin Templeton|3
+4|Chris Moneybags|24|true|1|1|Charles Schwab|2
+5|Tim Doe|48|false|2|2|Edward Jones|2
+6|Sara Jones|32|true|3|3|Franklin Templeton|3
+7|Ryan Youngun|22|false|3|3|Franklin Templeton|3
+sqlite> 
+
+4. sqlite> SELECT clients.name, advisors.name FROM clients JOIN advisors ON clients.advisor_id = advisors.id;
+Joe Smith|Charles Schwab
+Bob Adams|Edward Jones
+John Walstreet|Franklin Templeton
+Chris Moneybags|Charles Schwab
+Tim Doe|Edward Jones
+Sara Jones|Franklin Templeton
+Ryan Youngun|Franklin Templeton
+sqlite> 
+
+5. ## Client “Ryan Youngun” decided he wasn’t happy with his advisors performance in the stock market so he pulled his money out of the Financial Advisor Firm : 
+
+sqlite> DELETE FROM clients WHERE name="Ryan Youngun";
+sqlite> SELECT * FROM clients
+   ...> ;
+1|Joe Smith|42|true|1
+2|Bob Adams|36|false|2
+3|John Walstreet|50|true|3
+4|Chris Moneybags|24|true|1
+5|Tim Doe|48|false|2
+6|Sara Jones|32|true|3
+
+## Franklin Templeton was Ryans advisor, so we need to update his table to show he now has only 2 current clients instead of 3 : 
+
+sqlite> UPDATE advisors SET number_of_clients=2 WHERE name="Franklin Templeton";
+sqlite> SELECT * FROM advisors;
+1|Charles Schwab|2
+2|Edward Jones|2
+3|Franklin Templeton|2
+sqlite> 
+

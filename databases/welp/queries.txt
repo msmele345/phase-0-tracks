@@ -1,0 +1,27 @@
+## RELEASE 2git ss
+
+sqlite> SELECT * FROM users, reviews WHERE reviews.businesses_id = users.id;
+1|Bradford|Pitt|1|3|It was just ok|1|1
+2|Mandy|Kaling|2|4|Great plumbing|2|3
+3|Angela|Jolie|3|5|Quick service|3|2
+sqlite> 
+
+
+sqlite> SELECT users.first_name, businesses.name, reviews.stars, reviews.comment 
+   ...> FROM ((reviews
+   ...> INNER JOIN users ON reviews.user_id = users.id)
+   ...> INNER JOIN businesses ON reviews.businesses_id = businesses.id);
+Bradford|Sushi World|3|It was just ok
+Angela|Plumbing by Janet|4|Great plumbing
+Mandy|Amir's Towing|5|Quick service
+sqlite> 
+
+
+sqlite> SELECT users.first_name, businesses.name, reviews.stars, reviews.comment 
+   ...> FROM reviews
+   ...> JOIN businesses ON reviews.businesses_id = businesses.id
+   ...> JOIN users ON reviews.user_id = users.id
+   ...> WHERE businesses.name = "Sushi World"
+   ...> ;
+Bradford|Sushi World|3|It was just ok
+sqlite> 

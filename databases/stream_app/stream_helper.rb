@@ -49,3 +49,33 @@ db.execute(movies)
 #TEST with people and movies
 
 
+# db.execute("INSERT INTO selections (title, genre, stars) VALUES ('The Rock', 'Action', 4)")
+# db.execute("INSERT INTO selections (title, genre, stars) VALUES ('Trading Places', 'Comedy', 3)")
+
+
+##USE FAKER TO GENERATE MANY MOVIE names
+##Assign each moving name to a genre?
+def create_movie(db, title, genre, stars)
+  db.execute("INSERT INTO selections (title, genre, stars) VALUES (?, ?, ?)", [title,genre, stars])
+end
+
+
+#Use combination of UM songs and movie quotes to generate movie names
+#Attach randomly generated genre to each name
+#Attach randomly generated star rating
+
+25.times do
+  genres = ["Action","Comedy", "Drama", "Sci_fi", "Documentary"]
+  create_movie(db, Faker::Movie.quote , genres[rand(0..4)] , rand(1..5))
+end
+
+11.times do
+  genres = ["Action","Comedy", "Drama", "Sci_fi", "Documentary"]
+  create_movie(db, Faker::UmphreysMcgee.song , genres[rand(0..4)] , rand(1..5))
+end
+
+#ORM retrieving data
+#assign execute call to variable name
+#iterate over movie names and assign a genre
+
+

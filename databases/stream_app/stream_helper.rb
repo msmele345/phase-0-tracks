@@ -64,15 +64,34 @@ def user_data(db, name, password, fav_genre)
   db.execute("INSERT INTO streamer (name, password, fav_genre) VALUES (?, ?, ?)", [name, password, fav_genre])
 end
 
-def pick_movie
+def combine_data
+  #Include user_data and db as parameters
+  #data = db.execute("INSERT JOIN COMMAND HERE")
+  #data.each?
+  # print combined data
+end
 
+#Pass in user preferences for category into pick movie method
+#assign a search all to variable
+#iterate over selections table
+  #If the user_pref equals the genre key , push the movie title into matches array
+#return random element in the array.
+def pick_movie(db,user_pref)
+  matches = []
+  search = db.execute("SELECT * FROM selections")
+    search.each do |movie|
+      if "#{movie['genre']}" == user_pref
+        matches << "#{movie['title']}"
+      end
+    end
+   puts "You are now watching...#{matches.sample}"
 end
 
 #BUILD TABLES
 #Use combination of UM songs and movie quotes to generate movie names
 #Attach randomly generated genre to each name
 #Attach randomly generated star rating
-
+#BUILD MOVIE DATABASE
 # 60.times do
 #   genres = ["Action","Comedy", "Drama", "Sci_fi", "Documentary"]
 #   create_movie(db, Faker::Movie.unique.quote , genres[rand(0..4)] , rand(1..5))
@@ -89,6 +108,7 @@ end
 # 1. Continue to build UI with tests. Account for bad input with if/else select random if bad input for category?
     # -Build match method that iterates over data and returns the users request(specific move to avoid add)
     # -Find way to display relevent match data. Use Join db tables for this. Research.
+    #-Star search?
 
 
 
@@ -125,3 +145,5 @@ end
 p user_info
 
 user_data(db, user_name, pwd, category)
+pick_movie(db,category)
+

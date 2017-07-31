@@ -47,6 +47,7 @@ db.execute(store_data)
 db.execute(movies)
 
 #TEST with people and movies
+
 # db.execute("INSERT INTO selections (title, genre, stars) VALUES ('The Rock', 'Action', 4)")
 # db.execute("INSERT INTO selections (title, genre, stars) VALUES ('Trading Places', 'Comedy', 3)")
 
@@ -57,15 +58,18 @@ db.execute(movies)
 #Attach randomly generated star rating to each title
 
 #BUILD MOVIE DATABASE
-# 60.times do
+
+# 25.times do
 #   genres = ["Action","Comedy", "Drama", "Sci_fi", "Documentary"]
 #   create_movie(db, Faker::Movie.unique.quote , genres[rand(0..4)] , rand(1..5))
 # end
 
-# 11.times do
+# 25.times do
 #   genres = ["Action","Comedy", "Drama", "Sci_fi", "Documentary"]
 #   create_movie(db, Faker::UmphreysMcgee.song , genres[rand(0..4)] , rand(1..5))
 # end
+
+#DRIVER METHODS
 
 def create_movie(db, title, genre, stars)
   db.execute("INSERT INTO selections (title, genre, stars) VALUES (?, ?, ?)", [title,genre, stars])
@@ -76,9 +80,7 @@ def user_data(db, name, password, fav_genre)
 end
 
 def user_feedback(db, name, title_match, actually_watched, user_rating )
-  #Include user_data and db as parameters
-  #data = db.execute("INSERT JOIN COMMAND HERE")
-  #data.each?
+  #data = db.execute("INSERT JOIN COMMAND HERE") ?? !
   db.execute("INSERT INTO data (name, title_match, actually_watched, user_rating) VALUES (?, ?, ?, ?)", [name, title_match, actually_watched, user_rating])
 end
 
@@ -87,6 +89,7 @@ end
 #iterate over selections table
   #If the user_pref equals the genre key , push the movie title into matches array
 #return random element in the array. This is the key feature! No wasting time scrolling through endless suggestions
+
 def pick_movie(db,user_pref)
   matches = []
   search = db.execute("SELECT * FROM selections")
@@ -100,18 +103,10 @@ def pick_movie(db,user_pref)
    pick
 end
 
-##Next steps
-#1. Test UI to ensure FALSE trigger on feedback works ok
-#2. Re-try join display in feedback method?
-#3. Add more pseduo as needed to explain intentions
-#4. Build SPECS?
 
 
+#Test ORM
 
-
-#ORM retrieving data
-
-#Test
 # search = db.execute("SELECT * FROM selections WHERE stars=4")
 # p search
 

@@ -1,0 +1,33 @@
+
+body {
+  margin:0;
+}
+
+
+header {
+  text-align: center;
+}
+
+#image {
+  height: auto;
+  padding-left: 9cm;
+}
+
+
+#picture {
+  padding-left: 5cm;
+  font-size: 20px;
+}
+
+.text{
+  text-align: center;
+  border: 2px;
+  border-style: solid;
+  border-color: red;
+  padding: 1em;
+}
+
+
+/*
+# is for IDs
+. is for classes */

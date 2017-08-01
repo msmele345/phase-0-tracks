@@ -19,12 +19,29 @@ header {
   font-size: 20px;
 }
 
-.text{
+#text{
   text-align: center;
-  border: 2px;
+/*  border: 2px;
   border-style: solid;
-  border-color: red;
+  border-color: red;*/
   padding: 1em;
+}
+
+#text2{
+  border: 2px solid black ;
+  font-size: 50px
+  width: 140px;
+  margin-left: 14cm;
+}
+
+#button1 {
+  text-align: center;
+  border: 1px solid black;
+  font-size: 16px;
+  padding : {14px 40px;}
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 14cm;
 }
 
 

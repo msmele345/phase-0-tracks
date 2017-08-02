@@ -1,0 +1,28 @@
+##Codeacadmey Practice problems:
+##Button creation tests
+
+
+$(document).ready(function() {
+    $('div').mouseenter(function () {
+        $('div').hide();
+    });
+});
+
+$(document).ready(function() {
+    $('div').mouseenter(function () {
+        $('div').fadeTo('fast',1);
+    });
+});
+
+
+$(document).ready(function() {
+    $('div').mouseenter(function () {
+        $('div').fadeTo('fast',1);
+    });
+    $('div').mouseleave(function () {
+        $('div').fadeTo('fast',0.5)
+    });
+});
+
+##The above fades the button out with fadeTo when the mouse hovers over the button. As the mouse leaves the button, a second fucntion mouseleave is called to fade back (at the same speed) to the original tint of the button color.
+

@@ -18,6 +18,14 @@ $(document).ready(function(){
     });
 });
 
+$(function () {
+    $('#button2').on('click', function () {
+        var text = $('#text');
+        text.val(text.val() + "SHIT");
+    });
+});
+
+
 // $(document).ready(function(){
 //   var $target = $('spouse');
 //   var $button2 = $('button2');

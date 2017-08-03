@@ -21,7 +21,7 @@ $(document).ready(function(){
 $(function () {
     $('#button2').on('click', function () {
         var text = $('#text');
-        text.val(text.val() + "SHIT");
+        text.val(text.val() + "It works!");
     });
 });
 
